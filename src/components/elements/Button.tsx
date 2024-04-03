@@ -2,17 +2,21 @@ import React, { ReactElement } from "react";
 import { twMerge } from "tailwind-merge";
 
 export type ButtonProps = {
-  icon: ReactElement;
+  icon?: ReactElement;
+  className?: string;
 } & React.PropsWithChildren;
 
-export function Button({ children, icon }: ButtonProps) {
+export function Button({ children, className, icon }: ButtonProps) {
   return (
     <button
       type="button"
-      className="bg-[var(--bg)] p-[1rem] rounded-full w-[150px] b-0 text-[var(--text)] cursor-pointer font-semibold flex justify-center items-center"
+      className={twMerge(
+        "bg-[var(--button)] p-4 rounded-full w-[150px] b-0 text-black cursor-pointer font-semibold flex justify-center items-center",
+        className || "",
+      )}
     >
       {children}
-      <span className="icon w-[1rem] h-[1rem] ml-[8px]">{icon}</span>
+      {icon && <span>{icon}</span>}
     </button>
   );
 }

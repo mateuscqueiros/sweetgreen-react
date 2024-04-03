@@ -7,11 +7,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="menu">
+    <header className="menu h-[42px] md:h-full">
       <div className="container relative w-full max-w-[var(--content-width)] mx-auto md:p-5 md:flex md:flex-row md:justify-between md:items-center">
         <nav
           className={twMerge(
-            "absolute top-0 left-[-250px] h-screen bg-white w-[250px] p-5 z-10 shadow-black transition md:bg-transparent md:shadow-black md:static md:w-fit md:h-[unset] md:p-0",
+            "absolute top-0 left-[-250px] h-screen bg-white w-[250px] p-5 z-50 shadow-black transition md:bg-transparent md:shadow-black md:static md:w-fit md:h-[unset] md:p-0",
             open ? "left-0 fixed" : null,
           )}
         >
@@ -36,7 +36,7 @@ export function Header() {
             </div>
           </div>
         </nav>
-        <div className="header-fixed absolute p-5 flex justify-center items-center md:p-0">
+        <div className="header-fixed absolute p-5 flex justify-center items-center">
           <IconMenu2
             id="open-menu"
             className="absolute left-[20px] cursor-pointer md:hidden"
