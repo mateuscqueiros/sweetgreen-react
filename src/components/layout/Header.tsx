@@ -2,12 +2,13 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { ActionButton } from "../elements";
+import logo from "./logo.svg";
 
 export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="menu h-[42px] md:h-full">
+    <header className="menu md:h-full">
       <div className="container relative w-full max-w-[var(--content-width)] mx-auto md:p-5 md:flex md:flex-row md:justify-between md:items-center">
         <nav
           className={twMerge(
@@ -36,13 +37,13 @@ export function Header() {
             </div>
           </div>
         </nav>
-        <div className="header-fixed absolute p-5 flex justify-center items-center">
+        <div className="header-fixed relative p-5 md:p-0 flex justify-center items-center">
           <IconMenu2
             id="open-menu"
             className="absolute left-[20px] cursor-pointer md:hidden"
             onClick={() => setOpen(true)}
           />
-          <img id="logo" />
+          <img src={logo} id="logo" className="hidden md:block" />
         </div>
         <div className="header-actions-desktop hidden md:flex">
           <ActionButton variant="primary">Sign in</ActionButton>
