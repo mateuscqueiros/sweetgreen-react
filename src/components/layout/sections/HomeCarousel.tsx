@@ -90,7 +90,9 @@ export function HomeCarouselSection() {
           />
         </div>
         <div className="card-content">
-          <h3 className="text-xl uppercase my-4">{item.name}</h3>
+          <h3 className="text-xl uppercase my-4 italic font-medium">
+            {item.name}
+          </h3>
           <p className="mb-3">{item.description}</p>
           <a href="#" className="order-button object-fit flex items-center">
             <span className="text">Order now</span>
@@ -103,7 +105,7 @@ export function HomeCarouselSection() {
 
   return (
     <section id="food-presentation">
-      <div className="carousel-header mb-4 p-4 overflow-auto flex flex-wrap justify-center">
+      <div className="carousel-header mt-2 p-4 overflow-auto flex flex-wrap justify-center">
         <ul className="food-classes m-0 p-0 w-full max-w-[450px] flex justify-between">
           {categories.map((item) => (
             <Category key={item.id} item={item} />

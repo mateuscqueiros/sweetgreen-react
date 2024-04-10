@@ -5,7 +5,7 @@ import bannerImg from "./images/banner.webp";
 export function HomeBannerSection() {
   return (
     <section id="home-banner" className="relative w-full">
-      <div className="banner-image">
+      <div className="banner-image brightness-[.7]">
         <img src={bannerImg} className="h-[500px] min-w-full object-cover" />
       </div>
       <div className="banner-content absolute top-0 flex items-end just-start z-10 p-[20px] h-full w-full">

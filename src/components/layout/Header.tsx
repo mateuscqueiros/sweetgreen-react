@@ -12,7 +12,7 @@ export function Header() {
       <div className="container relative w-full max-w-[var(--content-width)] mx-auto md:p-5 md:flex md:flex-row md:justify-between md:items-center">
         <nav
           className={twMerge(
-            "absolute top-0 left-[-250px] h-screen bg-white w-[250px] p-5 z-50 shadow-black transition md:bg-transparent md:shadow-black md:static md:w-fit md:h-[unset] md:p-0",
+            "transition-[left] absolute top-0 left-[-250px] h-screen bg-white w-[250px] p-5 z-50 shadow-black md:bg-transparent md:shadow-black md:static md:w-fit md:h-[unset] md:p-0",
             open ? "left-0 fixed" : null,
           )}
         >
